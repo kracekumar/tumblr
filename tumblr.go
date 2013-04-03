@@ -50,6 +50,12 @@ func check_error(err error) {
 	}
 }
 
+func NewTumblr() *Tumblr {
+	t := &Tumblr{}
+	t.client = &http.Client{}
+	return t
+}
+
 //Return ApiURL like http://api.tumblr.com/v2/blog/kracekumar
 func (t Tumblr) ApiURL() string {
 	if t.BlogName == "" {

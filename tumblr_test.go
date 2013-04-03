@@ -17,9 +17,10 @@ func TestTumblrCallbackURLFail(t *testing.T) {
 }
 
 func TestTumblrBlog(t *testing.T) {
-	tum := &Tumblr{}
+	tum := NewTumblr()
 	tum.BlogName = "kracekumar.com"
 	tum.ConsumerKey = CONSUMERKEY //comes from settings.go
+	//fmt.Println(tum.client.Get("http://google.com"))
 	rsp := tum.info()
 	fmt.Println(FetchResponseBody(rsp))
 	//fmt.Println("test")
