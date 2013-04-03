@@ -5,4 +5,9 @@ Api for accessing/posting to tumblr.com. Detailed [docs](http://www.tumblr.com/d
 
 Usage
 ===
-` go get `
+` go get https://github.com/kracekumar/tumblr`
+
+Testing
+======
+* `cp settings-sample.go settings.go` and update the values in `settings.go`.
+* `go test` 

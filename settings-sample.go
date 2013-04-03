@@ -1,0 +1,5 @@
+package tumblr
+
+const (
+	CONSUMERKEY = ""
+)
