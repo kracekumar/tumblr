@@ -1,5 +1,0 @@
-package tumblr
-
-const (
-	CONSUMERKEY = ""
-)
