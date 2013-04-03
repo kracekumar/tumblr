@@ -9,5 +9,5 @@ Usage
 
 Testing
 ======
-* `cp settings-sample.go settings.go` and update the values in `settings.go`.
+* `cp sample/settings-sample.go settings.go` and update the values in `settings.go`.
 * `go test` 
