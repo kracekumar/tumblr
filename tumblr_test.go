@@ -2,27 +2,22 @@ package tumblr
 
 import (
 	"fmt"
+	//"io/ioutil"
 	"testing"
 )
-
-func TestTumblrCallbackURLFail(t *testing.T) {
-	tum := &Tumblr{}
-	tum.CallbackURL = "http://tumblr.com"
-	tum.ConsumerKey = "consumerkey"
-	tum.ConsumerSecret = "consumersecret"
-	fmt.Println(tum)
-	//t.Log(Tumblr{})
-	//tumblr := Tumblr{ConsumerSecret: "xxxx", ConsumerKey: "yyyyy", CallbackURL: "http"}
-	//t.Log(tumblr)
-}
 
 func TestTumblrBlog(t *testing.T) {
 	tum := NewTumblr()
 	tum.BlogName = "kracekumar.com"
 	tum.ConsumerKey = CONSUMERKEY //comes from settings.go
-	//fmt.Println(tum.client.Get("http://google.com"))
 	rsp := tum.info()
-	fmt.Println(FetchResponseBody(rsp))
-	//fmt.Println("test")
-	//fmt.Println(rsp)
+	fmt.Println(rsp)
+}
+
+func TestGetAllTextPosts(t *testing.T) {
+	tum := NewTumblr()
+	tum.BlogName = "kracekumar.com"
+	tum.ConsumerKey = CONSUMERKEY
+	rsp := tum.GetAllTextPosts("text", "raw", false, false, 52)
+	fmt.Println(rsp)
 }
